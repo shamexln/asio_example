@@ -4,6 +4,7 @@ include(filelist.cmake)
 
 add_executable( ${target}
     ${ASIO_EXAMPLE_FILES}
+    message.h
 )
 
 include_directories("./")
@@ -50,6 +51,9 @@ target_link_libraries(${target}
     Boost_system
     Boost_thread
     Boost_serialization
+    protobuf::libprotoc
+    protobuf::libprotobuf 
+    protobuf::libprotobuf-lite
     ${OPENSSL_LIBRARIES}
 )
 

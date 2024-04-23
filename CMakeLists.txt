@@ -18,6 +18,8 @@ if(OPENSSL_FOUND)
     include_directories(${OPENSSL_INCLUDE_DIR})
 endif()
 
+find_package( Protobuf REQUIRED )
+
 add_compile_definitions(BOOST_AUTO_LINK_NOMANGLE)
 
 add_subdirectory(src)
